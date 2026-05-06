@@ -1,487 +1,480 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Read Only by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brandon Hargis – Mechanical Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Willis Corto</a></h1>
-					<p>I got reprogrammed by a rogue AI<br />
-					and now I'm totally cray</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Can Do</a></li>
-						<li><a href="#three">A Few Accomplishments</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+  :root {
+    --navy: #0d1b2e;
+    --navy-mid: #162740;
+    --steel: #2e4a6a;
+    --accent: #e8913a;
+    --accent-light: #f5c07a;
+    --light: #f4f1eb;
+    --muted: #8a9bb0;
+    --white: #ffffff;
+    --text: #1a2a3a;
+  }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  html { scroll-behavior: smooth; }
 
-				<!-- Main -->
-					<div id="main">
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+  }
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>Read Only</h2>
-										<p>Just an incredibly simple responsive site<br />
-										template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
-									</header>
-									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
-								</div>
-							</section>
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13, 27, 46, 0.96);
+    backdrop-filter: blur(10px);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    color: var(--white);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Can Do</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">Write all the code</li>
-										<li class="icon solid fa-cubes">Stack small boxes</li>
-										<li class="icon solid fa-book">Read books and stuff</li>
-										<li class="icon solid fa-coffee">Drink much coffee</li>
-										<li class="icon solid fa-bolt">Lightning bolt</li>
-										<li class="icon solid fa-users">Shadow clone technique</li>
-									</ul>
-								</div>
-							</section>
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; align-items: center;
+    padding: 6rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,145,58,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--light));
+    pointer-events: none;
+  }
+  .hero-content { max-width: 760px; position: relative; z-index: 1; }
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px; height: 2px;
+    background: var(--accent);
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent-light);
+  }
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--muted);
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--navy);
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--white);
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--accent); background: rgba(232,145,58,0.08); }
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>A Few Accomplishments</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Possibly broke spacetime</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+  /* CERT BADGE */
+  .cert-badge {
+    margin-top: 3rem;
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(232,145,58,0.3);
+    border-radius: 6px;
+    padding: 0.6rem 1.1rem;
+  }
+  .cert-badge-icon {
+    width: 28px; height: 28px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .cert-badge-text { font-size: 0.825rem; color: var(--muted); }
+  .cert-badge-text strong { color: var(--white); display: block; font-size: 0.875rem; }
 
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</div>
-							</section>
+  /* SECTIONS COMMON */
+  section { padding: 6rem 4rem; }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--navy);
+    margin-bottom: 3rem;
+    line-height: 1.1;
+  }
+  .dark-section { background: var(--navy); }
+  .dark-section h2 { color: var(--white); }
+  .dark-section .section-label { color: var(--accent); }
+  .dark-section p { color: var(--muted); }
 
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+  /* ABOUT */
+  #about { background: var(--white); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #3a4a5a;
+    margin-bottom: 1.25rem;
+  }
+  .skills-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .skill-item {
+    background: var(--light);
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .skill-item span { display: block; font-size: 0.775rem; color: var(--muted); font-weight: 400; margin-top: 0.125rem; }
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+  /* EXPERIENCE */
+  #experience { background: var(--light); }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(13,27,46,0.1);
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-date { font-size: 0.825rem; color: var(--muted); font-weight: 500; padding-top: 0.2rem; }
+  .exp-role { font-size: 1.125rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
+  .exp-company { font-size: 0.9rem; color: var(--accent); font-weight: 500; margin-bottom: 0.75rem; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .exp-bullets li {
+    font-size: 0.9rem;
+    color: #4a5a6a;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+  }
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+  /* PROJECTS */
+  #projects { background: var(--navy); }
+  #projects h2 { color: var(--white); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .project-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .project-card:hover { border-color: rgba(232,145,58,0.4); transform: translateY(-3px); }
+  .project-tag {
+    display: inline-block;
+    background: rgba(232,145,58,0.15);
+    color: var(--accent-light);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+  }
+  .project-title { font-size: 1.125rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+  .project-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+  .project-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tool-pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #8a9bb0;
+    font-size: 0.775rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+  }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+  /* CONTACT */
+  #contact { background: var(--white); text-align: center; }
+  #contact h2 { margin-bottom: 1rem; }
+  .contact-sub { color: #5a6a7a; font-size: 1rem; margin-bottom: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .contact-links { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+  .contact-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .contact-link.primary { background: var(--navy); color: var(--white); }
+  .contact-link.primary:hover { background: var(--steel); }
+  .contact-link.secondary { border: 1.5px solid var(--navy); color: var(--navy); }
+  .contact-link.secondary:hover { background: var(--navy); color: var(--white); }
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.825rem;
+    color: rgba(255,255,255,0.25);
+  }
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    #hero { padding: 5rem 1.5rem 3rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+<nav>
+  <div class="nav-logo">Brandon <span>Hargis</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Mechanical Engineer</div>
+    <h1>Brandon<br><em>Hargis</em></h1>
+    <p class="hero-desc">
+      BS in Mechanical Engineering from the University of Arkansas. I design, test, and build things that actually work — from structural aircraft systems to fluid thermal analysis.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+    <div class="cert-badge">
+      <div class="cert-badge-icon">EIT</div>
+      <div class="cert-badge-text">
+        <strong>Engineer-in-Training Certified</strong>
+        License #9944 · Passed FE Exam
+      </div>
+    </div>
+  </div>
+</section>
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About Me</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Builder.<br>Tester.<br>Engineer.</h2>
+      <p>
+        I'm a Mechanical Engineering graduate from the University of Arkansas with a passion for designing and building things that actually work. I enjoy the hands-on side of engineering — whether that's testing a structure to its limits, modeling a system in CAD, or digging into data to figure out why something performed the way it did.
+      </p>
+      <p>
+        With an Aerospace concentration and an EIT certification, I bring a strong technical foundation paired with real-world experience in design, prototyping, and testing environments.
+      </p>
+    </div>
+    <div>
+      <div style="margin-bottom: 0.75rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Core Skills</div>
+      <div class="skills-list">
+        <div class="skill-item">SolidWorks & AutoCAD / Civil 3D <span>3D modeling, technical drawings, CAD design</span></div>
+        <div class="skill-item">FEA & Structural Load Testing <span>Finite element analysis, destructive & non-destructive testing</span></div>
+        <div class="skill-item">MATLAB & Data Analysis <span>Performance analysis, pump/heat exchanger testing</span></div>
+        <div class="skill-item">Manufacturing & Prototyping <span>3D printing, CNC, laser cutting</span></div>
+        <div class="skill-item">Technical Documentation <span>Reports, ECRs, BOMs, design reviews</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <h2>Where I've Worked</h2>
 
-								</div>
-							</section>
-						-->
+  <div class="exp-item">
+    <div class="exp-date">Aug 2024 – May 2025</div>
+    <div>
+      <div class="exp-role">Mechanical Designer & Test Engineer</div>
+      <div class="exp-company">Design Build Fly (DBF) Team — University of Arkansas</div>
+      <ul class="exp-bullets">
+        <li>Designed and modeled structural systems in SolidWorks applying fluid and structural load principles.</li>
+        <li>Developed and executed structural test plans, fabricating custom rigs that increased carry weight from 10 to 18 lbs.</li>
+        <li>Collaborated with aerodynamics and propulsion sub-teams to refine designs for durability and mission compliance.</li>
+        <li>Prepared detailed documentation and contributed to design reviews simulating real-world engineering processes.</li>
+      </ul>
+    </div>
+  </div>
 
-					</div>
+  <div class="exp-item">
+    <div class="exp-date">May 2024 – Aug 2024</div>
+    <div>
+      <div class="exp-role">Mechanical Engineering Intern</div>
+      <div class="exp-company">Marshalltown</div>
+      <ul class="exp-bullets">
+        <li>Supported design and development of construction hand tools using SolidWorks 3D CAD and technical drawings.</li>
+        <li>Conducted prototype testing and analyzed data to validate tool performance and material durability.</li>
+        <li>Documented engineering change requests (ECRs) and maintained accurate bills of materials (BOMs).</li>
+        <li>Participated in lean manufacturing and 5S initiatives to optimize workflow and workspace organization.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label" style="color: var(--accent);">Projects</div>
+  <h2 style="color: var(--white);">Selected Work</h2>
+  <div class="projects-grid">
 
-			</div>
+    <div class="project-card">
+      <div class="project-tag">Structural Engineering</div>
+      <div class="project-title">Design Build Fly — Structural Systems</div>
+      <p class="project-desc">
+        Designed and modeled load-bearing structural systems for a competitive UAV. Developed and executed test plans using custom fabricated rigs, achieving an 80% increase in flight mission carry capacity.
+      </p>
+      <div class="project-tools">
+        <span class="tool-pill">SolidWorks</span>
+        <span class="tool-pill">FEA</span>
+        <span class="tool-pill">Structural Testing</span>
+        <span class="tool-pill">Documentation</span>
+      </div>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <div class="project-card">
+      <div class="project-tag">Thermal & Fluid Systems</div>
+      <div class="project-title">Pump & Heat Exchanger Performance Study</div>
+      <p class="project-desc">
+        Conducted hands-on testing and analysis of a centrifugal pump and plate heat exchanger. Applied pump affinity laws to determine system curves at multiple operating speeds, and evaluated parallel vs. counterflow thermal configurations.
+      </p>
+      <div class="project-tools">
+        <span class="tool-pill">MATLAB</span>
+        <span class="tool-pill">Pipe Flow Analysis</span>
+        <span class="tool-pill">Heat Transfer</span>
+        <span class="tool-pill">Data Analysis</span>
+      </div>
+    </div>
 
-	</body>
+    <div class="project-card">
+      <div class="project-tag">Product Design</div>
+      <div class="project-title">Construction Tool Development — Marshalltown</div>
+      <p class="project-desc">
+        Supported full product development cycle for professional construction hand tools — from 3D CAD modeling and technical drawings through prototype testing and material validation.
+      </p>
+      <div class="project-tools">
+        <span class="tool-pill">SolidWorks</span>
+        <span class="tool-pill">Prototype Testing</span>
+        <span class="tool-pill">ECR Documentation</span>
+        <span class="tool-pill">Lean Manufacturing</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <h2>Let's Connect</h2>
+  <p class="contact-sub">I'm actively looking for entry-level engineering roles. Feel free to reach out — I'd love to talk.</p>
+  <div class="contact-links">
+    <a href="mailto:Brandonhargiswork@gmail.com" class="contact-link primary">✉ Brandonhargiswork@gmail.com</a>
+    <a href="tel:2024694018" class="contact-link secondary">📞 (202) 469-4018</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Brandon Hargis · Mechanical Engineer · Fayetteville, AR
+</footer>
+
+</body>
 </html>
