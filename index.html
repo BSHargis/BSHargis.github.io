@@ -10,6 +10,117 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.project-card {
+				background: #f9f9f9;
+				border-left: 4px solid #6fc3df;
+				border-radius: 4px;
+				padding: 1.5em 1.75em;
+				margin-bottom: 2em;
+			}
+			.project-card h4 {
+				margin-bottom: 0.25em;
+				font-size: 1.1em;
+			}
+			.project-card .project-meta {
+				font-size: 0.85em;
+				color: #888;
+				margin-bottom: 0.75em;
+				font-style: italic;
+			}
+			.project-card p {
+				margin-bottom: 0.75em;
+				font-size: 0.95em;
+				line-height: 1.65;
+			}
+			.project-card ul {
+				margin: 0.5em 0 0.75em 1.25em;
+				font-size: 0.95em;
+				line-height: 1.65;
+			}
+			.stat-row {
+				display: flex;
+				gap: 1.5em;
+				flex-wrap: wrap;
+				margin: 1em 0;
+			}
+			.stat-box {
+				background: #fff;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				padding: 0.6em 1em;
+				text-align: center;
+				min-width: 100px;
+			}
+			.stat-box .stat-num {
+				display: block;
+				font-size: 1.4em;
+				font-weight: bold;
+				color: #4a90d9;
+				line-height: 1.1;
+			}
+			.stat-box .stat-label {
+				display: block;
+				font-size: 0.72em;
+				color: #888;
+				margin-top: 0.2em;
+			}
+			.tag-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4em;
+				margin-top: 0.75em;
+			}
+			.tag {
+				background: #e8f4fb;
+				border: 1px solid #b3d9f0;
+				color: #2a6496;
+				font-size: 0.75em;
+				padding: 0.2em 0.6em;
+				border-radius: 3px;
+			}
+			.section-divider {
+				border: none;
+				border-top: 2px solid #e0e0e0;
+				margin: 2em 0;
+			}
+			.cert-highlight {
+				display: inline-block;
+				background: #fff8e1;
+				border: 1px solid #f0c040;
+				border-radius: 4px;
+				padding: 0.5em 1em;
+				font-size: 0.9em;
+				margin-top: 0.5em;
+			}
+			.two-col {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.5em;
+				margin: 1em 0;
+			}
+			.sub-card {
+				background: #fff;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				padding: 1em 1.25em;
+			}
+			.sub-card h5 {
+				margin: 0 0 0.5em 0;
+				font-size: 0.9em;
+				color: #2a6496;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+			.sub-card ul {
+				margin: 0 0 0 1em;
+				font-size: 0.88em;
+				line-height: 1.6;
+			}
+			@media (max-width: 600px) {
+				.two-col { grid-template-columns: 1fr; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -39,97 +150,210 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+				<div id="main">
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One: About -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>Brandon Hargis</h2>
-										<p>Mechanical Engineer · Aerospace Concentration · EIT #9944</p>
-									</header>
-									<p>I'm a Mechanical Engineering graduate from the University of Arkansas with a passion for designing and building things that actually work. I enjoy the hands-on side of engineering — whether that's testing a structure to its limits, modeling a system in CAD, or digging into data to figure out why something performed the way it did. With an Aerospace concentration and an EIT certification, I bring a strong technical foundation paired with real-world experience in design, prototyping, and testing environments.</p>
-
-									<h4>Experience</h4>
-									<ul>
-										<li><strong>Mechanical Designer &amp; Test Engineer</strong> — Design Build Fly Team, University of Arkansas (Aug 2024 – May 2025)</li>
-										<li><strong>Mechanical Engineering Intern</strong> — Marshalltown (May 2024 – Aug 2024)</li>
-									</ul>
-								</div>
-							</section>
-
-						<!-- Two: Skills -->
-							<section id="two">
-								<div class="container">
-									<h3>Skills</h3>
-									<p>A mix of design, analysis, and hands-on engineering tools built through coursework, competition, and industry experience.</p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-drafting-compass">SolidWorks &amp; AutoCAD / Civil 3D</li>
-										<li class="icon solid fa-chart-line">MATLAB &amp; Data Analysis</li>
-										<li class="icon solid fa-flask">FEA &amp; Structural Load Testing</li>
-										<li class="icon solid fa-tools">3D Printing, CNC &amp; Laser Cutting</li>
-										<li class="icon solid fa-file-alt">Technical Documentation &amp; Reports</li>
-										<li class="icon solid fa-certificate">Engineer-in-Training (EIT) #9944</li>
-									</ul>
-								</div>
-							</section>
-
-						<!-- Three: Projects -->
-							<section id="three">
-								<div class="container">
-									<h3>Projects</h3>
-									<p>Selected engineering projects from competition and coursework.</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="Design Build Fly" /></a>
-											<div class="inner">
-												<h4>Design Build Fly — Structural Systems</h4>
-												<p><strong>Aug 2024 – May 2025</strong><br />
-												Designed and modeled structural systems for a competition UAV in SolidWorks. Developed and executed structural test plans using custom-fabricated rigs, increasing flight mission carry capacity from 10 to 18 lbs — an 80% improvement. Collaborated with aerodynamics and propulsion sub-teams and prepared detailed design documentation.</p>
-												<p><em>Tools: SolidWorks, FEA, Structural Testing, Technical Documentation</em></p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="Pump and Heat Exchanger" /></a>
-											<div class="inner">
-												<h4>Pump &amp; Heat Exchanger Performance Study</h4>
-												<p><strong>Apr 2025 – May 2025</strong><br />
-												Conducted hands-on testing and analysis of a centrifugal pump and plate heat exchanger. Applied pump affinity laws to experimentally determine system curves at multiple operating speeds, and evaluated parallel vs. counterflow thermal configurations. Authored a full technical report with error analysis and design conclusions.</p>
-												<p><em>Tools: MATLAB, Pipe Flow Analysis, Heat Transfer, Technical Reporting</em></p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four: Contact -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>I'm actively looking for entry-level mechanical engineering roles. Feel free to reach out — I'd love to connect.</p>
-									<ul>
-										<li>📧 <a href="mailto:Brandonhargiswork@gmail.com">Brandonhargiswork@gmail.com</a></li>
-										<li>📞 (202) 469-4018</li>
-										<li>📍 Fayetteville, AR</li>
-									</ul>
-								</div>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
+					<!-- About -->
+					<section id="one">
+						<div class="image main" data-position="center">
+							<img src="images/banner.jpg" alt="" />
+						</div>
 						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Brandon Hargis. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<header class="major">
+								<h2>Brandon Hargis</h2>
+								<p>Mechanical Engineer · Aerospace Concentration · EIT Certified</p>
+							</header>
+							<p>
+								I'm a Mechanical Engineering graduate from the University of Arkansas with a passion for designing and building things that actually work. I enjoy the hands-on side of engineering — whether that's testing a structure to its limits, modeling a system in CAD, or digging into data to figure out why something performed the way it did. With an Aerospace concentration and an EIT certification under my belt, I bring a strong technical foundation paired with real-world experience in design, prototyping, and testing.
+							</p>
+							<div class="cert-highlight">
+								🏅 <strong>Engineer-in-Training (EIT) Certified</strong> &nbsp;·&nbsp; License #9944 &nbsp;·&nbsp; Passed FE Exam
+							</div>
+						</div>
+					</section>
+
+					<!-- Skills -->
+					<section id="two">
+						<div class="container">
+							<h3>Skills</h3>
+							<p>A mix of design, analysis, and hands-on engineering tools built through coursework, competition, and industry experience.</p>
+							<ul class="feature-icons">
+								<li class="icon solid fa-drafting-compass">SolidWorks &amp; AutoCAD / Civil 3D</li>
+								<li class="icon solid fa-chart-line">MATLAB &amp; Data Analysis</li>
+								<li class="icon solid fa-flask">FEA &amp; Structural Load Testing</li>
+								<li class="icon solid fa-tools">3D Printing, CNC &amp; Laser Cutting</li>
+								<li class="icon solid fa-file-alt">Technical Documentation &amp; Reports</li>
+								<li class="icon solid fa-certificate">Engineer-in-Training (EIT) #9944</li>
 							</ul>
 						</div>
 					</section>
+
+					<!-- Projects -->
+					<section id="three">
+						<div class="container">
+							<h3>Projects</h3>
+							<p>A collection of engineering projects spanning structural design, fluid systems, and aerospace — each involving real design decisions, hands-on testing, and technical documentation.</p>
+
+							<!-- ================================
+							     PROJECT 1: DBF
+							     ================================ -->
+							<div class="project-card">
+								<h4>Design Build Fly (DBF) — "Soaring Swine" UAV</h4>
+								<div class="project-meta">AIAA Competition · University of Arkansas · Aug 2024 – May 2025 · Role: Mechanical Designer &amp; Test Engineer</div>
+
+								<p>As part of the University of Arkansas' 14-member Wild Warthogs team, I contributed to the full design, build, and test cycle of a competition radio-controlled aircraft — the <em>Soaring Swine</em> — for the 2024-2025 AIAA Design Build Fly competition. The aircraft was designed to carry external fuel pylons and deploy an autonomous sub-aircraft (the X-1 "Plummeting Piglet") in flight across four scored missions.</p>
+
+								<p><strong>My Contributions</strong></p>
+								<ul>
+									<li>Designed and modeled structural systems in SolidWorks, applying fluid and structural load principles to wing, fuselage, and landing gear components.</li>
+									<li>Developed and executed structural test plans using custom-fabricated rigs for both destructive and non-destructive testing.</li>
+									<li>Performed static G-load testing, tip-to-tip wing tests, and dynamic drop tests to validate structural integrity under competition loads.</li>
+									<li>Collaborated with aerodynamics and propulsion sub-teams to refine designs for durability, manufacturability, and mission compliance.</li>
+									<li>Prepared detailed technical documentation and contributed to formal design reviews throughout the project.</li>
+								</ul>
+
+								<hr class="section-divider" />
+								<p><strong>Aircraft Overview</strong></p>
+								<p>The final design was a dual-motor monoplane with a dihedral high-wing, conventional tail, and tail-dragger landing gear — selected through systematic trade studies across wing shape, tail configuration, propulsion, and landing gear. The wing used an FX 76-120 root airfoil optimized for maximum payload lift, with an SG4022 tip airfoil providing aerodynamic twist for improved lift-to-drag performance. The airframe was built using a balsa-carbon rod construction with 3D-printed ABS integration components and laser-cut parts.</p>
+
+								<div class="stat-row">
+									<div class="stat-box"><span class="stat-num">22.7 lbs</span><span class="stat-label">Max Takeoff Weight</span></div>
+									<div class="stat-box"><span class="stat-num">16 lbs</span><span class="stat-label">M2 Payload Capacity</span></div>
+									<div class="stat-box"><span class="stat-num">61.5 mph</span><span class="stat-label">Max Airspeed</span></div>
+									<div class="stat-box"><span class="stat-num">80%</span><span class="stat-label">Carry Capacity Increase</span></div>
+									<div class="stat-box"><span class="stat-num">11.45</span><span class="stat-label">Peak CL/CD</span></div>
+								</div>
+
+								<hr class="section-divider" />
+								<p><strong>Key Engineering Highlights</strong></p>
+								<ul>
+									<li><strong>Wing optimization:</strong> Used XFLR5 and an iterative Excel solver to derive maximum takeoff weight, wing loading, aspect ratio, and neutral point. Aerodynamic twist via tip airfoil change reduced induced drag and improved L/D at all angles of attack.</li>
+									<li><strong>Structural analysis:</strong> Topological optimization of wing center pieces in nTopology minimized weight while maintaining strength under 2G pylon loads. FEA validated landing gear mounts under 400N normal and shear loads.</li>
+									<li><strong>Propulsion system:</strong> Dual SunnySky X3120 585KV brushless motors with EOLO 13x7 propellers and 22.2V 6S LiPo batteries. Static thrust testing confirmed 8.38 lbf per motor — 23.6% above the calculated M2 requirement of 6.78 lbf.</li>
+									<li><strong>Pylon system:</strong> Spring-loaded locking hatch mechanism designed for single-motion engagement to minimize ground mission time. Pylon spanwise position analytically optimized to 47.8% half-span to minimize bending stress across all load cases.</li>
+									<li><strong>X-1 sub-aircraft:</strong> A 22g flying wing (ASA-CF filament) with bell-shaped lift distribution and static elevons for stable orbital descent — no GPS or servo required, saving over 1.77 oz.</li>
+									<li><strong>Manufacturing:</strong> CNC laser-cut double-ply cross-grain balsa ribs, 3D-printed ABS structural joints, carbon fiber rod spars, and Ultracote shrink wrap skin.</li>
+								</ul>
+
+								<hr class="section-divider" />
+								<p><strong>Testing Results</strong></p>
+								<ul>
+									<li>Wing held 1G of distributed load with 3.1 in tip deflection — within the 3.5 in allowable limit.</li>
+									<li>Motor and ESC temps remained within rated limits (motor: 192.3°F vs. 200°F limit; ESC: 94.7°F vs. 215°F limit) during full-throttle 3-minute heat test simulating Tucson competition conditions.</li>
+									<li>V1 Soaring Swine successfully completed first flight on February 6th, 2025 — confirmed stable flight with no stall, validating the aerodynamic design.</li>
+									<li>X-1 underwent continuous flight testing from October 2024 through April 2025 with iterative aileron deflection tuning for consistent orbital descent.</li>
+								</ul>
+
+								<div class="tag-row">
+									<span class="tag">SolidWorks</span>
+									<span class="tag">XFLR5</span>
+									<span class="tag">MATLAB</span>
+									<span class="tag">OpenVSP</span>
+									<span class="tag">FEA (ANSYS)</span>
+									<span class="tag">nTopology</span>
+									<span class="tag">Structural Testing</span>
+									<span class="tag">3D Printing</span>
+									<span class="tag">Laser Cutting</span>
+									<span class="tag">Carbon Fiber</span>
+									<span class="tag">Technical Documentation</span>
+								</div>
+							</div>
+
+							<!-- ================================
+							     PROJECT 2: PUMP & HX
+							     ================================ -->
+							<div class="project-card">
+								<h4>Pump &amp; Heat Exchanger Performance Study</h4>
+								<div class="project-meta">Thermal &amp; Fluid Systems Lab · University of Arkansas · Apr 2025 – May 2025 · Group of 4</div>
+
+								<p>Conducted a full experimental study of a centrifugal pump and brazed plate heat exchanger system, applying fundamental fluid mechanics and thermodynamics principles to experimentally determine real-world performance and compare against theoretical predictions. The experiment spanned two major subsystems — a variable-speed pump loop and a configurable plate heat exchanger — with data collected across multiple operating conditions.</p>
+
+								<hr class="section-divider" />
+								<p><strong>Pump Performance Study</strong></p>
+								<p>The pump was tested at four RPM settings (max, ¾, ½, and ¼ speed) across multiple flow rates to experimentally generate pump curves and system curves, then validated against pump affinity law predictions.</p>
+								<ul>
+									<li>Calculated pump head using the simplified Bernoulli-based pressure equation, accounting for inlet and outlet pressure gauge readings at each operating point.</li>
+									<li>Applied pump affinity laws to predict how head, flow rate, and power scale with RPM changes — then compared predicted values against experimental data at each operating state.</li>
+									<li>Calculated pump efficiency at each operating point using measured current, voltage, specific weight, flow rate, and head — finding that efficiency peaked at maximum RPM and maximum flow, consistent with theoretical predictions.</li>
+									<li>Affinity law predictions were most accurate at higher flow and RPM settings (2–4% error), with error increasing to 20–40% at quarter-speed settings due to steady-state timing and flow meter variability.</li>
+								</ul>
+
+								<hr class="section-divider" />
+								<p><strong>Heat Exchanger Performance Study</strong></p>
+								<p>The brazed plate heat exchanger was tested in both parallel flow and counter flow configurations at two heater temperatures (60°C and 45°C) and four cold-water flow rates (18, 12, 8, and 4 L/min), with the hot water flow rate held constant throughout.</p>
+
+								<div class="two-col">
+									<div class="sub-card">
+										<h5>Parallel Flow</h5>
+										<ul>
+											<li>Tested at 60°C and 45°C heater settings</li>
+											<li>Cold water varied from 18 → 4 L/min</li>
+											<li>Energy transfer rate decreased as cold flow decreased</li>
+											<li>Lower cold flow → higher efficiency (more dwell time)</li>
+										</ul>
+									</div>
+									<div class="sub-card">
+										<h5>Counter Flow</h5>
+										<ul>
+											<li>Tested at same conditions as parallel flow</li>
+											<li>Counter flow at 60°C, 4 L/min cold water = highest efficiency</li>
+											<li>Consistent with manufacturer guidance favoring counter flow</li>
+											<li>Results show stronger temperature gradient maintenance</li>
+										</ul>
+									</div>
+								</div>
+
+								<ul>
+									<li>Calculated energy transfer rates for both hot and cold water sides using Q = ṁCpΔT — ideally these should match; deviations quantified error in the experimental setup.</li>
+									<li>Calculated heat exchanger effectiveness using ε = Q/Qmax, where Qmax used the minimum fluid capacity rate and the maximum temperature difference between inlet streams.</li>
+									<li>Identified cold-water feed line pressure variability (shared line across all lab stations) as the primary source of error — hot-water energy transfer rate was used for final calculations as the more reliable measurement.</li>
+									<li>Authored a complete technical report including abstract, theory, experimental methods, data tables, error analysis, discussion, and conclusions.</li>
+								</ul>
+
+								<div class="stat-row">
+									<div class="stat-box"><span class="stat-num">4</span><span class="stat-label">RPM Settings Tested</span></div>
+									<div class="stat-box"><span class="stat-num">2</span><span class="stat-label">HX Configurations</span></div>
+									<div class="stat-box"><span class="stat-num">2–4%</span><span class="stat-label">Affinity Law Error (High RPM)</span></div>
+									<div class="stat-box"><span class="stat-num">4 L/min</span><span class="stat-label">Best HX Efficiency Flow Rate</span></div>
+								</div>
+
+								<div class="tag-row">
+									<span class="tag">MATLAB</span>
+									<span class="tag">Pump Affinity Laws</span>
+									<span class="tag">Pipe Flow Analysis</span>
+									<span class="tag">Heat Transfer</span>
+									<span class="tag">Thermodynamics</span>
+									<span class="tag">Data Analysis</span>
+									<span class="tag">Error Analysis</span>
+									<span class="tag">Technical Reporting</span>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- Contact -->
+					<section id="four">
+						<div class="container">
+							<h3>Contact Me</h3>
+							<p>I'm actively looking for entry-level mechanical engineering roles. Feel free to reach out — I'd love to connect.</p>
+							<ul>
+								<li>📧 <a href="mailto:Brandonhargiswork@gmail.com">Brandonhargiswork@gmail.com</a></li>
+								<li>📞 (202) 469-4018</li>
+								<li>📍 Fayetteville, AR</li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<ul class="copyright">
+							<li>&copy; Brandon Hargis. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
 
 			</div>
 
