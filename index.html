@@ -118,7 +118,13 @@
 				line-height: 1.6;
 			}
 
-			/* Drawing gallery */
+			/* Force banner position */
+		#one .image.main img {
+			object-fit: cover;
+			object-position: 50% 0% !important;
+		}
+
+		/* Drawing gallery */
 			.drawing-gallery {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
