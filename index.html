@@ -117,8 +117,43 @@
 				font-size: 0.88em;
 				line-height: 1.6;
 			}
+
+			/* Drawing gallery styles */
+			.drawing-gallery {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1em;
+				margin: 1.25em 0;
+			}
+			.drawing-gallery .drawing-full {
+				grid-column: 1 / -1;
+			}
+			.drawing-item {
+				background: #fff;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+			.drawing-item img {
+				width: 100%;
+				display: block;
+				object-fit: contain;
+				background: #f0f0f0;
+				max-height: 340px;
+			}
+			.drawing-item .drawing-caption {
+				font-size: 0.78em;
+				color: #666;
+				padding: 0.5em 0.75em;
+				border-top: 1px solid #eee;
+				font-style: italic;
+				text-align: center;
+			}
+
 			@media (max-width: 600px) {
 				.two-col { grid-template-columns: 1fr; }
+				.drawing-gallery { grid-template-columns: 1fr; }
+				.drawing-gallery .drawing-full { grid-column: 1; }
 			}
 		</style>
 	</head>
@@ -201,6 +236,22 @@
 								<div class="project-meta">AIAA Competition · University of Arkansas · Aug 2024 – May 2025 · Role: Mechanical Designer &amp; Test Engineer</div>
 
 								<p>As part of the University of Arkansas' 14-member Wild Warthogs team, I contributed to the full design, build, and test cycle of a competition radio-controlled aircraft — the <em>Soaring Swine</em> — for the 2024-2025 AIAA Design Build Fly competition. The aircraft was designed to carry external fuel pylons and deploy an autonomous sub-aircraft (the X-1 "Plummeting Piglet") in flight across four scored missions.</p>
+
+								<!-- DRAWING GALLERY -->
+								<div class="drawing-gallery">
+									<div class="drawing-item drawing-full">
+										<img src="images/Screenshot 2026-05-07 015739.png" alt="Soaring Swine 3-view and isometric drawing" />
+										<div class="drawing-caption">Fig. 1 — Soaring Swine: 3-view orthographic + isometric SolidWorks drawing (DBF 24-25 V3, Sheet 1 of 4)</div>
+									</div>
+									<div class="drawing-item">
+										<img src="images/SW Drawing 2.jpg" alt="Exploded fuselage, wing, and tail assembly drawing" />
+										<div class="drawing-caption">Fig. 2 — Exploded assembly: fuselage, wing structure, and tail components (Sheet 2 of 4)</div>
+									</div>
+									<div class="drawing-item">
+										<img src="images/SW Drawings 4.jpg" alt="Payload, pylon, and X-1 sub-aircraft drawing" />
+										<div class="drawing-caption">Fig. 3 — Payload/pylon system and X-1 Plummeting Piglet with deployment mechanism (Sheet 4 of 4)</div>
+									</div>
+								</div>
 
 								<p><strong>My Contributions</strong></p>
 								<ul>
@@ -303,9 +354,9 @@
 								</div>
 
 								<ul>
-									<li>Calculated energy transfer rates for both hot and cold water sides using Q = ṁCpΔT — ideally these should match; deviations quantified error in the experimental setup.</li>
-									<li>Calculated heat exchanger effectiveness using ε = Q/Qmax, where Qmax used the minimum fluid capacity rate and the maximum temperature difference between inlet streams.</li>
-									<li>Identified cold-water feed line pressure variability (shared line across all lab stations) as the primary source of error — hot-water energy transfer rate was used for final calculations as the more reliable measurement.</li>
+									<li>Calculated energy transfer rates for both hot and cold water sides using Q = ṁCpΔT — deviations between the two quantified experimental error.</li>
+									<li>Calculated heat exchanger effectiveness using ε = Q/Qmax, where Qmax used the minimum fluid capacity rate and maximum temperature difference between inlet streams.</li>
+									<li>Identified cold-water feed line pressure variability (shared line across all lab stations) as the primary error source — hot-water energy transfer rate used for final calculations as the more reliable measurement.</li>
 									<li>Authored a complete technical report including abstract, theory, experimental methods, data tables, error analysis, discussion, and conclusions.</li>
 								</ul>
 
